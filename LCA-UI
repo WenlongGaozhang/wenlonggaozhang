@@ -1,0 +1,455 @@
+import sys
+import pandas as pd
+from PyQt5.QtWidgets import (QApplication, QMainWindow, QVBoxLayout, QHBoxLayout,
+                             QWidget, QGroupBox, QComboBox, QLabel,
+                             QPushButton, QTextEdit, QFrame, QGridLayout, QMessageBox, QFontDialog)
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QFont, QFontDatabase
+from PyQt5.QtWidgets import QApplication
+
+
+class MarineFuelApp(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        # 启用高DPI缩放
+        QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
+        QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
+        QApplication.setStyle("Fusion")  # 强制使用 Fusion 风格
+
+        self.setWindowTitle("Life Cycle Assessment of Alternative Marine Fuels")
+        self.setGeometry(100, 100, 1400, 500)
+
+        # 初始化字体数据库
+        self.font_db = QFontDatabase()
+
+        # 设置全局样式表
+        self.setStyleSheet("""
+            QMainWindow {
+                background-color: #f0f8ff;
+            }
+
+            QGroupBox {
+                background-color: #d9ecff;
+                border: 1px solid #a3c9f7;
+                border-radius: 10px;
+                margin-top: 25px;  /* 为标题留出更多空间 */
+                padding: 15px;
+            }
+
+            QGroupBox::title {
+                subcontrol-origin: margin;
+                left: 10px;
+                padding: 0 5px;
+                font-size: 16px;
+                font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+                font-weight: bold;
+                color: #2a5caa;
+            }
+
+           QTextEdit, QComboBox {
+        background-color: rgba(255, 255, 255, 0.2);  /* 白色，70% 不透明 */
+        border: 1px solid #a3c9f7;
+        font-family: 'Consolas', monospace;
+        font-size: 18px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    
+    /* 下拉列表样式 */
+    QComboBox QAbstractItemView {
+        background-color: #d9ecff;          /* 下拉项背景色 */
+        color: black;                     /* 下拉项文字颜色 */
+        selection-background-color: #d9ecff;  /* 选中项背景色 */
+        selection-color: black;           /* 选中项文字颜色 */
+    }
+
+            QPushButton {
+                font-weight: bold;
+                font-size: 22px;
+                color: white;
+                background-color: #5b9bd5;
+                border-radius: 6px;
+                padding: 8px 16px;
+                min-width: 120px;
+            }
+
+            QPushButton:hover {
+                background-color: #4a89c7;
+            }
+
+            QLabel[title="true"] {
+                font-size: 20px;
+                font-weight: 800;
+                color: #2a5caa;
+            }
+
+            QLabel {
+                font-size: 14px;
+                color: #333;
+            }
+
+            QFrame {
+                background-color: #e6f2ff;
+                border-radius: 8px;
+                padding: 5px;
+            }
+
+            /* 结果显示框的特殊样式 */
+            .result-frame {
+                background-color: #e6ffe6;
+                border: 1px solid #a3c9f7;
+            }
+        """)
+
+        # 设置基础字体
+        self.base_font = QFont()
+        self.base_font.setFamilies([
+            "Microsoft YaHei",  # 中文优先
+            "Segoe UI",
+            "PingFang SC",
+            "Arial"
+        ])
+        self.base_font.setPointSize(10)
+        QApplication.setFont(self.base_font)
+
+        # Initialize parameters
+        self.fuel_params = {
+            "Fuel1": {"name": "Fuel1", "params": "C11"},
+            "Fuel2": {"name": "Fuel2", "params": "C12"},
+            "Fuel3": {"name": "Fuel3", "params": "C13"}
+        }
+
+        self.storage_params = {
+            "Way1": {"name": "Way1", "params": "C21"},
+            "Way2": {"name": "Way2", "params": "C22"},
+            "Way3": {"name": "Way3", "params": "C23"}
+        }
+
+        self.tank_params = {
+            "Path1": {"name": "Path1", "params": "C31"},
+            "Path2": {"name": "Path2", "params": "C32"},
+            "Path3": {"name": "Path3", "params": "C33"}
+        }
+
+        self.impact_params = {
+            "Societal": {"name": "Societal", "params": "I1"},
+            "Economic": {"name": "Economic", "params": "I2"},
+            "Environmental": {"name": "Environmental", "params": "I3"}
+        }
+
+        # Initialize results
+        self.results = {
+            "Fuel Consumption": {"value": 0, "param": "R1"},
+            "Electricity Consumption": {"value": 0, "param": "R2"},
+            "Emissions": {"value": 0, "param": "R3"},
+            "Price": {"value": 0, "param": "R4"}
+        }
+
+        # Load parameters from Excel
+        if not self.load_parameters():
+            QMessageBox.warning(self, "Warning", "Failed to load parameter file, will use default values")
+            self.parameter_dict = {}
+
+        self.init_ui()
+
+    def load_parameters(self):
+        try:
+            self.parameter_df = pd.read_excel('parameters.xlsx')
+            self.parameter_dict = dict(zip(self.parameter_df['Parameter'], self.parameter_df['Value']))
+            return True
+        except Exception as e:
+            print(f"Parameter loading error: {str(e)}")
+            return False
+
+    def init_ui(self):
+        main_widget = QWidget()
+        main_layout = QVBoxLayout()
+        main_layout.setContentsMargins(15, 15, 15, 15)
+        main_layout.setSpacing(15)
+
+        # Main Title - 使用更大的字体
+        title = QLabel("Life Cycle Assessment of Alternative Marine Fuels")
+        title_font = QFont()
+        title_font.setFamilies(["Microsoft YaHei", "Segoe UI", "Arial"])
+        title_font.setPointSize(18)
+        title_font.setBold(True)
+        title.setFont(title_font)
+        title.setAlignment(Qt.AlignCenter)
+        title.setStyleSheet("""
+            font-size: 24px;           /* 字体大小 */
+            font-weight: bold;        /* 加粗 */
+            font-family: 'Microsoft YaHei', 'Arial';  /* 字体 */
+            color: #1a4b8c;           /* 颜色 */
+            margin-bottom: 20px;      /* 底部间距 */
+        """)
+        main_layout.addWidget(title)
+
+        # Top section with dropdowns
+        top_section = QHBoxLayout()
+        top_section.setSpacing(20)
+
+        # Fuel Types Section
+        fuel_group = self.create_dropdown_group(
+            "Fuel Types",
+            ["Fuel1", "Fuel2", "Fuel3"],
+            "Properties",
+            self.on_fuel_changed
+        )
+        top_section.addWidget(fuel_group, stretch=1)
+
+        # Storage - Tank Section
+        storage_group = self.create_dropdown_group(
+            "Storage - Tank",
+            ["Way1", "Way2", "Way3"],
+            "Properties",
+            self.on_storage_changed
+        )
+        top_section.addWidget(storage_group, stretch=1)
+
+        # Tank - Wake Section
+        tank_group = self.create_dropdown_group(
+            "Tank - Wake",
+            ["Path1", "Path2", "Path3"],
+            "Properties",
+            self.on_tank_changed
+        )
+        top_section.addWidget(tank_group, stretch=1)
+
+        main_layout.addLayout(top_section)
+
+        # Calculate Button - 更大的按钮
+        calculate_btn = QPushButton("Calculate")
+        calculate_btn.setFont(QFont('Microsoft YaHei', 12, QFont.Bold))
+        calculate_btn.setStyleSheet("""
+            QPushButton {
+                min-height: 40px;
+                font-size: 25px;
+            }
+        """)
+        calculate_btn.clicked.connect(self.calculate_results)
+        main_layout.addWidget(calculate_btn, alignment=Qt.AlignCenter)
+
+        # Middle section with results
+        middle_section = QHBoxLayout()
+        middle_section.setSpacing(20)
+
+        # Results Group
+        results_group = QGroupBox("Results")
+        results_layout = QGridLayout()
+        results_layout.setSpacing(15)
+
+        self.result_displays = {}
+        for i, result_name in enumerate(self.results.keys()):
+            frame = QFrame()
+            frame.setFrameShape(QFrame.StyledPanel)
+            frame.setProperty("class", "result-frame")
+            layout = QVBoxLayout()
+            layout.setSpacing(5)
+
+            label = QLabel(f"{result_name} {self.results[result_name]['param']}")
+            label.setFont(QFont('Microsoft YaHei', 10))
+
+            self.result_displays[result_name] = QLabel("0")
+            result_font = QFont('Microsoft YaHei', 12)
+            result_font.setBold(True)
+            self.result_displays[result_name].setFont(result_font)
+            self.result_displays[result_name].setAlignment(Qt.AlignCenter)
+
+            layout.addWidget(label)
+            layout.addWidget(self.result_displays[result_name])
+            frame.setLayout(layout)
+
+            results_layout.addWidget(frame, i // 2, i % 2)
+
+        results_group.setLayout(results_layout)
+        middle_section.addWidget(results_group, stretch=2)
+
+        # Impact Types Section
+        impact_group = QGroupBox("Impact Types")
+        impact_layout = QVBoxLayout()
+        impact_layout.setSpacing(10)
+
+        self.impact_combo = QComboBox()
+        self.impact_combo.addItems(["Societal", "Economic", "Environmental"])
+        self.impact_combo.setFont(QFont('Microsoft YaHei', 10))
+        self.impact_combo.currentTextChanged.connect(self.on_impact_changed)
+        impact_layout.addWidget(self.impact_combo)
+
+        self.impact_params_display = QTextEdit()
+        self.impact_params_display.setReadOnly(True)
+        self.impact_params_display.setFont(QFont('Consolas', 10))
+        self.impact_params_display.setMaximumHeight(100)
+        impact_layout.addWidget(self.impact_params_display)
+
+        impact_group.setLayout(impact_layout)
+        middle_section.addWidget(impact_group, stretch=1)
+
+        main_layout.addLayout(middle_section)
+
+        # Bottom section
+        bottom_section = QHBoxLayout()
+        bottom_section.setSpacing(20)
+
+        # Impact Results
+        impact_results_group = QGroupBox("Impact Results")
+        impact_results_layout = QVBoxLayout()
+
+        self.impact_display = QTextEdit()
+        self.impact_display.setReadOnly(True)
+        self.impact_display.setFont(QFont('Consolas', 10))
+        self.impact_display.setPlaceholderText("Impact results will appear here...")
+        impact_results_layout.addWidget(self.impact_display)
+
+        impact_results_group.setLayout(impact_results_layout)
+        bottom_section.addWidget(impact_results_group, stretch=2)
+
+        # Impact Analysis Section
+        impact_analysis_group = QGroupBox("Impact Analysis")
+        impact_analysis_layout = QVBoxLayout()
+
+        analysis_label = QLabel("Detailed analysis will be shown here")
+        analysis_label.setAlignment(Qt.AlignCenter)
+        analysis_label.setFont(QFont('Microsoft YaHei', 10))
+        impact_analysis_layout.addWidget(analysis_label)
+
+        impact_analysis_group.setLayout(impact_analysis_layout)
+        bottom_section.addWidget(impact_analysis_group, stretch=1)
+
+        main_layout.addLayout(bottom_section)
+
+        main_widget.setLayout(main_layout)
+        self.setCentralWidget(main_widget)
+
+        # Initialize with default selections
+        self.current_fuel = "Fuel1"
+        self.current_storage = "Way1"
+        self.current_tank = "Path1"
+        self.current_impact = "Societal"
+        self.on_fuel_changed(self.current_fuel)
+        self.on_storage_changed(self.current_storage)
+        self.on_tank_changed(self.current_tank)
+        self.on_impact_changed(self.current_impact)
+
+    def create_dropdown_group(self, title, items, subtitle, callback):
+        group = QGroupBox(title)
+        layout = QVBoxLayout()
+        layout.setSpacing(10)
+
+        # Dropdown
+        combo = QComboBox()
+        combo.addItems(items)
+        combo.setFont(QFont('Microsoft YaHei', 10))
+        combo.currentTextChanged.connect(callback)
+        layout.addWidget(combo)
+
+        # Subtitle
+        sub_label = QLabel(subtitle)
+        sub_label.setFont(QFont('Microsoft YaHei', 9))
+        layout.addWidget(sub_label)
+
+        # Parameters display
+        params_display = QTextEdit()
+        params_display.setReadOnly(True)
+        params_display.setFont(QFont('Consolas', 10))
+        params_display.setMaximumHeight(100)
+        layout.addWidget(params_display)
+
+        group.setLayout(layout)
+
+        # Store the display based on the group
+        if title == "Fuel Types":
+            self.fuel_display = params_display
+        elif title == "Storage - Tank":
+            self.storage_display = params_display
+        elif title == "Tank - Wake":
+            self.tank_display = params_display
+
+        return group
+
+    # 其他方法保持不变...
+    def on_fuel_changed(self, text):
+        self.current_fuel = text
+        params = self.fuel_params[text]
+        self.fuel_display.setText(f"Name: {params['name']}\nParameters: {params['params']}")
+
+    def on_storage_changed(self, text):
+        self.current_storage = text
+        params = self.storage_params[text]
+        self.storage_display.setText(f"Name: {params['name']}\nParameters: {params['params']}")
+
+    def on_tank_changed(self, text):
+        self.current_tank = text
+        params = self.tank_params[text]
+        self.tank_display.setText(f"Name: {params['name']}\nParameters: {params['params']}")
+
+    def on_impact_changed(self, text):
+        self.current_impact = text
+        params = self.impact_params[text]
+        self.impact_params_display.setText(f"Name: {params['name']}\nParameters: {params['params']}")
+        self.calculate_impact()
+
+    def calculate_results(self):
+        if not hasattr(self, 'parameter_dict'):
+            if not self.load_parameters():
+                QMessageBox.critical(self, "Error", "Cannot load parameter file")
+                return
+
+        try:
+            fuel_value = self.parameter_dict.get(self.fuel_params[self.current_fuel]['params'], 1)
+            storage_value = self.parameter_dict.get(self.storage_params[self.current_storage]['params'], 1)
+            tank_value = self.parameter_dict.get(self.tank_params[self.current_tank]['params'], 1)
+
+            for result_name in self.results.keys():
+                r_value = self.parameter_dict.get(self.results[result_name]['param'], 1)
+                self.results[result_name]['value'] = fuel_value * storage_value * tank_value * r_value
+                self.result_displays[result_name].setText(f"{self.results[result_name]['value']:.2f}")
+
+            if hasattr(self, 'current_impact'):
+                self.calculate_impact()
+
+        except Exception as e:
+            QMessageBox.critical(self, "Calculation Error", f"Error during calculation: {str(e)}")
+
+    def calculate_impact(self):
+        if not all(result['value'] != 0 for result in self.results.values()):
+            return
+
+        try:
+            impact_value = self.parameter_dict.get(
+                self.impact_params[self.current_impact]['params'], 1)
+
+            impact_text = f"Impact Type: {self.current_impact} ({self.impact_params[self.current_impact]['params']})\n"
+            impact_text += f"Impact Coefficient: {impact_value}\n\nDetailed Results:\n"
+
+            for result_name, result in self.results.items():
+                final_value = result['value'] * impact_value
+                impact_text += (
+                    f"{result_name}: {result['value']:.2f} × {impact_value} = {final_value:.2f}\n"
+                )
+
+            self.impact_display.setText(impact_text)
+        except Exception as e:
+            QMessageBox.critical(self, "Impact Calculation Error", f"Impact calculation failed: {str(e)}")
+
+
+if __name__ == "__main__":
+    # 检查参数文件是否存在，如果不存在则创建
+    try:
+        pd.read_excel('parameters.xlsx')
+    except:
+        try:
+            data = {
+                'Parameter': ['C11', 'C12', 'C13', 'C21', 'C22', 'C23',
+                              'C31', 'C32', 'C33', 'R1', 'R2', 'R3', 'R4',
+                              'I1', 'I2', 'I3'],
+                'Value': [10] * 16  # 所有值设为10
+            }
+            pd.DataFrame(data).to_excel('parameters.xlsx', index=False)
+            print("Created parameters.xlsx with default values")
+        except Exception as e:
+            print(f"Failed to create parameter file: {str(e)}")
+
+    app = QApplication(sys.argv)
+    window = MarineFuelApp()
+    window.show()
+    sys.exit(app.exec_())
