@@ -15,7 +15,7 @@ Colchester, UK** <br>
          width="150" 
          style="float: left; margin: 5px 15px 5px 0; shape-outside: margin-box;">
      <p style="text-indent: 2em;">
-        As a <strong>lecturer at the University of Essex</strong> and former UCL Research Fellow, I am a <strong>full-stack robotics engineer and simulation scientist</strong> specialising in the intersection of advanced mechatronics, multi-physics high-fidelity modelling, and next-generation AI. Over the past six years, my research has spanned the entire <strong>physical-to-virtual pipeline</strong>: from designing, fabricating, and control-loop programming modular hybrid variable-stiffness manipulators and electronics-free bionic sensors, to executing non-linear elastomeric simulations within multiphysics environments such as <strong>ANSYS, Abaqus, and COMSOL</strong>. My published/under reviewed work in premier journals like <strong>*Advanced Science*</strong>, <strong>*IJRR*</strong>, and <strong>*IEEE Transactions on Robotics*</strong> demonstrates my commitment to sub-degree and millinewton modelling fidelity between simulation and reality. Currently, I am actively driving my technical expertise toward <strong>AI-guided embodiment and physics-aware world models</strong>. Recognising that learning-based control is rewriting the rules for complex, highly redundant systems, I am pioneering neural network integration for compliant architectures. I am leveraging <strong>NVIDIA Isaac Sim</strong> to develop GPU-accelerated parallel environments, establish pipelines for <strong>high-throughput synthetic data generation</strong>, and train <strong>reinforcement learning (RL) policies</strong> for end-to-end control. My ultimate vision is a robust symbiosis between classical physical intuition and generative AI, deploying deterministic safety envelopes to safeguard exploratory neural control.
+        As a <strong>lecturer at the University of Essex</strong> and former UCL Research Fellow, I am a <strong>full-stack robotics engineer and simulation scientist</strong> specialising in the intersection of advanced mechatronics, multi-physics high-fidelity modelling, and next-generation AI. Over the past six years, my research has spanned the entire <strong>physical-to-virtual pipeline</strong>: from designing, fabricating, and control-loop programming modular hybrid variable-stiffness manipulators and electronics-free bionic sensors, to executing non-linear elastomeric simulations within multiphysics environments. My published and under-review work in premier journals like Advanced Science, IJRR, and IEEE Transactions on Robotics serves as a powerful testament and peer-recognised validation of my established track record in biomimetic systems, fluidic/pneumatic actuation, and rigid-soft hybrid robot architectures. Currently, I am actively driving my technical expertise toward <strong>AI-guided embodiment and physics-aware world models</strong>. Recognising that learning-based control is rewriting the rules for complex, highly redundant systems, I am pioneering neural network integration for compliant architectures. I am leveraging <strong>NVIDIA Isaac Sim</strong> to develop GPU-accelerated parallel environments, establish pipelines for <strong>high-throughput synthetic data generation</strong>, and train <strong>reinforcement learning (RL) policies</strong> for end-to-end control. My ultimate vision is a robust symbiosis between classical physical intuition and generative AI, deploying deterministic safety envelopes to safeguard exploratory neural control.
     </p>
 </div>
 
@@ -30,7 +30,7 @@ Colchester, UK** <br>
 <img src="assets/images/Research-Summary-Wenlong.png" alt="My Education" width="650" height="auto">
 
 ## 🔬 Research Interests
-- **Modular Hybrid Variable Stiffness Robotic Manipulator** --- Collaboration with Professor Helge Arne Wurdemann 🔗 [Personal Page](https://helge-wurdemann.com/)  
+- **Modular Hybrid Variable Stiffness Robotic Manipulator** --- Collaboration with Professor Helge Arne Wurdemann
 
 ---
 
@@ -56,7 +56,7 @@ Colchester, UK** <br>
 
 ---
 
-- **Soft Continuum Manipulator with Reinforced Chambers** --- Co-project with Dr. Jialei Shi. 🔗 [Google Scholar](https://scholar.google.com/citations?user=6wK9sHEAAAAJ&hl=zh-CN)  
+- **Soft Continuum Manipulator with Reinforced Chambers** --- Co-project with Dr. Jialei Shi.
 
 ---
 
@@ -69,7 +69,7 @@ Colchester, UK** <br>
 
 ---
 
-- **Soft Tactile Sensors** --- Co-project with Dr. Yue Li. 🔗 [Google Scholar](https://scholar.google.co.uk/citations?hl=en&user=H63EvncAAAAJ)
+- **Soft Tactile Sensors** --- Co-project with Dr. Yue Li.
 
 ---
 
