@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!--# Dr. Wenlong Goazhang-->
-**UCL Robotics, Department of Mechanical Engineering**
+**Lecturer in Robotics and AI, University of Essex**
 
 ---
 <div style="max-width: 1000px; line-height: 1.5; text-align: justify;">
@@ -12,12 +12,7 @@ layout: default
          width="150" 
          style="float: left; margin: 5px 15px 5px 0; shape-outside: margin-box;">
      <p style="text-indent: 2em;">
-        I am a postdoctoral researcher specializing in robotics, with a particular focus on 
-        <strong>soft robotics</strong>, <strong>bio-inspired robotics</strong>, <strong>soft sensing</strong>, and <strong>haptic feedback</strong>. 
-        My research explores <strong>hybrid variable stiffness co-bot systems</strong>, 
-        <strong>fully soft continuum robots</strong>, <strong>soft tactile sensors</strong>, and  <strong>soft haptic feedback system</strong>,
-        aiming to enhance adaptability, functionality, and interaction in robotic systems. I am particularly interested in expanding the application boundaries of soft robotics into 
-        <strong>healthcare</strong>, <strong>industry</strong>, <strong>domestic assistance</strong>, and <strong>underwater exploration</strong>.
+        As a lecturer at the University of Essex and former UCL Research Fellow, I am a full-stack robotics engineer and simulation scientist specialising in the intersection of advanced mechatronics, multi-physics high-fidelity modelling, and next-generation AI. Over the past six years, my research has spanned the entire physical-to-virtual pipeline: from designing, fabricating, and control-loop programming modular hybrid variable-stiffness manipulators and electronics-free bionic sensors, to executing non-linear elastomeric simulations within multiphysics environments such as ANSYS, Abaqus, and COMSOL. My published work in premier journals like Advanced Science, IJRR and IEEE Transactions on Robotics demonstrates my commitment to sub-degree and millinewton modelling fidelity between simulation and reality.  Currently, I am actively driving my technical expertise toward AI-guided embodiment and physics-aware world models. Recognising that learning-based control is rewriting the rules for complex, highly redundant systems, I am pioneering neural network integration for compliant architectures. I am leveraging NVIDIA Isaac Sim to develop GPU-accelerated parallel environments, establish pipelines for high-throughput synthetic data generation, and train reinforcement learning (RL) policies for end-to-end control. My ultimate vision is a robust symbiosis between classical physical intuition and generative AI, deploying deterministic safety envelopes to safeguard exploratory neural control.
     </p>
 </div>
 
@@ -32,7 +27,7 @@ layout: default
 <img src="assets/images/Research-Summary-Wenlong.png" alt="My Education" width="650" height="auto">
 
 ## 🔬 Research Interests
-- **Hybrid Variable Stiffness Co-bot System** --- Collaboration with Professor Helge Arne Wurdemann 🔗 [Personal Page](https://helge-wurdemann.com/)  
+- **Modular Hybrid Variable Stiffness Robotic Manipulator** --- Collaboration with Professor Helge Arne Wurdemann 🔗 [Personal Page](https://helge-wurdemann.com/)  
 
 ---
 
