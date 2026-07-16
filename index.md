@@ -3,16 +3,19 @@ layout: default
 ---
 
 <!--# Dr. Wenlong Goazhang-->
-**Lecturer in Robotics and AI, University of Essex**
+**Lecturer in Robotics and AI, <br>
+School of Computer Science and Electronic Engineering <br>
+University of Essex <br>
+Colchester, UK** <br>
 
 ---
 <div style="max-width: 1000px; line-height: 1.5; text-align: justify;">
     <img src="assets/images/ID Photo_Gaozhang Wenlong400600.jpg" 
-         alt="Dr. Wenlong Goazhang" 
+         alt="Dr Wenlong Gaozhang" 
          width="150" 
          style="float: left; margin: 5px 15px 5px 0; shape-outside: margin-box;">
      <p style="text-indent: 2em;">
-        As a lecturer at the University of Essex and former UCL Research Fellow, I am a full-stack robotics engineer and simulation scientist specialising in the intersection of advanced mechatronics, multi-physics high-fidelity modelling, and next-generation AI. Over the past six years, my research has spanned the entire physical-to-virtual pipeline: from designing, fabricating, and control-loop programming modular hybrid variable-stiffness manipulators and electronics-free bionic sensors, to executing non-linear elastomeric simulations within multiphysics environments such as ANSYS, Abaqus, and COMSOL. My published work in premier journals like Advanced Science, IJRR and IEEE Transactions on Robotics demonstrates my commitment to sub-degree and millinewton modelling fidelity between simulation and reality.  Currently, I am actively driving my technical expertise toward AI-guided embodiment and physics-aware world models. Recognising that learning-based control is rewriting the rules for complex, highly redundant systems, I am pioneering neural network integration for compliant architectures. I am leveraging NVIDIA Isaac Sim to develop GPU-accelerated parallel environments, establish pipelines for high-throughput synthetic data generation, and train reinforcement learning (RL) policies for end-to-end control. My ultimate vision is a robust symbiosis between classical physical intuition and generative AI, deploying deterministic safety envelopes to safeguard exploratory neural control.
+        As a <strong>lecturer at the University of Essex</strong> and former UCL Research Fellow, I am a <strong>full-stack robotics engineer and simulation scientist</strong> specialising in the intersection of advanced mechatronics, multi-physics high-fidelity modelling, and next-generation AI. Over the past six years, my research has spanned the entire <strong>physical-to-virtual pipeline</strong>: from designing, fabricating, and control-loop programming modular hybrid variable-stiffness manipulators and electronics-free bionic sensors, to executing non-linear elastomeric simulations within multiphysics environments such as <strong>ANSYS, Abaqus, and COMSOL</strong>. My published work in premier journals like <strong>*Advanced Science*</strong>, <strong>*IJRR*</strong>, and <strong>*IEEE Transactions on Robotics*</strong> demonstrates my commitment to sub-degree and millinewton modelling fidelity between simulation and reality. Currently, I am actively driving my technical expertise toward <strong>AI-guided embodiment and physics-aware world models</strong>. Recognising that learning-based control is rewriting the rules for complex, highly redundant systems, I am pioneering neural network integration for compliant architectures. I am leveraging <strong>NVIDIA Isaac Sim</strong> to develop GPU-accelerated parallel environments, establish pipelines for <strong>high-throughput synthetic data generation</strong>, and train <strong>reinforcement learning (RL) policies</strong> for end-to-end control. My ultimate vision is a robust symbiosis between classical physical intuition and generative AI, deploying deterministic safety envelopes to safeguard exploratory neural control.
     </p>
 </div>
 
@@ -89,5 +92,6 @@ layout: default
 
 
 ## 📬 Contact
-📧 Email: wenlong.gaozhang.20@ucl.ac.uk  
+📧 Email: wenlong.gaozhang@essex.ac.uk
+
 🔗 [Google Scholar](https://scholar.google.ca/citations?user=vhKVcqsAAAAJ&hl=en)  ‖ [LinkedIn](https://www.linkedin.com/in/wenlong-gaozhang-b16962226/?originalSubdomain=uk)
