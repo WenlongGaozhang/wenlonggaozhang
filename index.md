@@ -15,7 +15,7 @@ Colchester, UK** <br>
          width="150" 
          style="float: left; margin: 5px 15px 5px 0; shape-outside: margin-box;">
      <p style="text-indent: 2em;">
-        As a <strong>lecturer at the University of Essex</strong> and former UCL Research Fellow, I am a <strong>full-stack robotics engineer and simulation scientist</strong> specialising in the intersection of advanced mechatronics, multi-physics high-fidelity modelling, and next-generation AI. Over the past six years, my research has spanned the entire <strong>physical-to-virtual pipeline</strong>: from designing, fabricating, and control-loop programming modular hybrid variable-stiffness manipulators and electronics-free bionic sensors, to executing non-linear elastomeric simulations within multiphysics environments such as <strong>ANSYS, Abaqus, and COMSOL</strong>. My published work in premier journals like <strong>*Advanced Science*</strong>, <strong>*IJRR*</strong>, and <strong>*IEEE Transactions on Robotics*</strong> demonstrates my commitment to sub-degree and millinewton modelling fidelity between simulation and reality. Currently, I am actively driving my technical expertise toward <strong>AI-guided embodiment and physics-aware world models</strong>. Recognising that learning-based control is rewriting the rules for complex, highly redundant systems, I am pioneering neural network integration for compliant architectures. I am leveraging <strong>NVIDIA Isaac Sim</strong> to develop GPU-accelerated parallel environments, establish pipelines for <strong>high-throughput synthetic data generation</strong>, and train <strong>reinforcement learning (RL) policies</strong> for end-to-end control. My ultimate vision is a robust symbiosis between classical physical intuition and generative AI, deploying deterministic safety envelopes to safeguard exploratory neural control.
+        As a <strong>lecturer at the University of Essex</strong> and former UCL Research Fellow, I am a <strong>full-stack robotics engineer and simulation scientist</strong> specialising in the intersection of advanced mechatronics, multi-physics high-fidelity modelling, and next-generation AI. Over the past six years, my research has spanned the entire <strong>physical-to-virtual pipeline</strong>: from designing, fabricating, and control-loop programming modular hybrid variable-stiffness manipulators and electronics-free bionic sensors, to executing non-linear elastomeric simulations within multiphysics environments such as <strong>ANSYS, Abaqus, and COMSOL</strong>. My published/under reviewed work in premier journals like <strong>*Advanced Science*</strong>, <strong>*IJRR*</strong>, and <strong>*IEEE Transactions on Robotics*</strong> demonstrates my commitment to sub-degree and millinewton modelling fidelity between simulation and reality. Currently, I am actively driving my technical expertise toward <strong>AI-guided embodiment and physics-aware world models</strong>. Recognising that learning-based control is rewriting the rules for complex, highly redundant systems, I am pioneering neural network integration for compliant architectures. I am leveraging <strong>NVIDIA Isaac Sim</strong> to develop GPU-accelerated parallel environments, establish pipelines for <strong>high-throughput synthetic data generation</strong>, and train <strong>reinforcement learning (RL) policies</strong> for end-to-end control. My ultimate vision is a robust symbiosis between classical physical intuition and generative AI, deploying deterministic safety envelopes to safeguard exploratory neural control.
     </p>
 </div>
 
@@ -49,14 +49,14 @@ Colchester, UK** <br>
 
 <div style="max-width: 1000px; line-height: 1.5; text-align: justify;">
     <video width="100%" controls>
-        <source src="assets/videos/Supplementary Video S1 low res_compressed.mp4" type="video/mp4">
+        <source src="assets/videos/Supplementary Video_compressed.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
 
 ---
 
-- **Soft Continuum Robots** --- Co-project with Dr. Jialei Shi. 🔗 [Google Scholar](https://scholar.google.com/citations?user=6wK9sHEAAAAJ&hl=zh-CN)  
+- **Soft Continuum Manipulator with Reinforced Chambers** --- Co-project with Dr. Jialei Shi. 🔗 [Google Scholar](https://scholar.google.com/citations?user=6wK9sHEAAAAJ&hl=zh-CN)  
 
 ---
 
@@ -90,18 +90,21 @@ Colchester, UK** <br>
 
 ---
 
-## 📄 Publications
-1. **W Gaozhang**, Y Li, J Shi, Y Wang, A Stilli, H Wurdemann. ''A novel stiffness-controllable joint using antagonistic actuation principles'', _Mechanism and Machine Theory_, 196, 105614.
+## 📄 Selected Publications
 
-3. **W Gaozhang**, J Shi, Y Li, A Stilli, H Wurdemann. ''Characterisation of Antagonistically Actuated, Stiffness-Controllable Joint-Link Units for Cobots'', _2023 IEEE International Conference on Robotics and Automation (ICRA)_, 655-661.
+### 🥇 First / Corresponding Author Publications
+1. **W. Gaozhang**, Y. Li, J. Shi, Y. Wang, A. Stilli, H.A. Wurdemann, “A modular and stiffness-controllable co-bot system achieving tasks flexibility and contact compliance,” *Advanced Science*. (Under Revision, **IF: 15.1**)
+2. **W. Gaozhang**, Y. Li, J. Shi, Y. Li, Y. Duan, S.A. Guaman, B. Englot, H.A. Wurdemann, Y. Liu, “Bio-inspired fluidic sensing enables situational awareness of flexible underwater manipulators,” *Science Robotics*.* (Under Review, **IF: 23.6**)
+3. **W. Gaozhang**, Y. Li, J. Shi, Y. Wang, A. Stilli, and H. Wurdemann, “A novel stiffness-controllable joint using antagonistic actuation principles,” *Mechanism and Machine Theory*, vol. 196, 2024. (**IF: 5.2, JCR Q1 Top**)
+4. **W. Gaozhang**, J. Shi, Y. Li, A. Stilli, and H. Wurdemann, “Characterisation of antagonistically actuated, stiffness-controllable joint-link units for cobots,” *IEEE International Conference on Robotics and Automation (ICRA)*, 2023. (**Top-tier Robotics Conference**)
+5. Z. Chen, M. Zou, **W. Gaozhang\***, Y. Liu, and J. Huang, “Movement Environment Assessment and Force Prediction for Quadruped Robots,” *Journal of Field Robotics (JFR)*, vol. 43, no. 1, pp. 63-75, 2026. (**IF: 5.2, JCR Q1 Top Journal** in Field & Autonomous Robotics, *\*Corresponding Author*).
 
-4. J Shi, **W Gaozhang**, HA Wurdemann. ''Design and characterisation of cross-sectional geometries for soft robotic manipulators with fibre-reinforced chambers'', _2022 IEEE 5th International Conference on Soft Robotics (RoboSoft)_, 125-131.
+### 👥 Collaborative / Co-Author Publications
+6. Y. Li, Y. Huang, **W. Gaozhang**, A.Q. Li, B. Englot, Y. Liu, “Variable-Resolution Virtual Maps for Autonomous Exploration with Unmanned Surface Vehicles (USVs),” *The International Journal of Robotics Research (IJRR)*. (Under Review, **Top-tier Robotics Journal**).
+7. J. Shi, H. Jin, S.A. Abad, **W. Gaozhang**, G. Shi, H.A. Wurdemann, “A Static Modeling and Evaluation Framework for Soft Continuum Robots With Reinforced Chambers,” *IEEE Transactions on Robotics (TRO)*, vol. 41, pp. 6419-6439, 2025. (**IF: 10.5, JCR Q1 Top**)
+8. Y. Li, **W. Gaozhang**, Z. Gongyu, P. Dasgupta, O. Sebastien, and H. Liu, “Flexible and stretchable optical waveguide tactile sensor for 3-axial force sensing,” *IEEE/ASME Transactions on Mechatronics (TMECH)*, 2026. (**IF: 6.1, JCR Q1 Top**).
+9. Y. Wang, M. Xu, **W. Gaozhang**, V. Muthurangu, H. Wurdemann, “From Patient-specific Digital Twin to Real-world Phantom: Autonomous Right Heart Catheterization,” *IEEE Robotics and Automation Magazine (RAM)*, Special Issue on *Embodied AI*, 2026. (**IF: 7.1**).
 
-6. J Shi, **W Gaozhang**, H Jin, G Shi, HA Wurdemann. ''Characterisation and control platform for pneumatically driven soft robots: Design and applications'', _2023 IEEE International Conference on Soft Robotics (RoboSoft)_, 1-8.
-
-7. Y Li, **W Gaozhang**, J Hu, D Cao, P Dasgupta, H Liu. ''Optical-waveguide based 3-axial tactile sensor for minimally invasive surgical instruments'', _IEEE Robotics and Automation Letters_, 9 (2), 1604-1611.
-
-8. D Zhang, **W Gaozhang**, Q Zhang. ''Alternative flexible correction forming of a blade: multipoint correction with surface measurement and deformation simulation'', _Advances in Manufacturing_, 11 (4), 587-600.
 
 
 ## 📬 Contact
