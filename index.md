@@ -93,7 +93,7 @@ Colchester, UK** <br>
 ## 📄 Selected Publications
 
 ### 🥇 First / Corresponding Author Publications
-1. **W. Gaozhang**, Y. Li, J. Shi, Y. Wang, A. Stilli, H.A. Wurdemann, “A modular and stiffness-controllable co-bot system achieving tasks flexibility and contact compliance,” *Advanced Science*. (Under Revision, **IF: 15.1**)
+1. **W. Gaozhang**, Y. Li, J. Shi, Y. Wang, A. Stilli, H.A. Wurdemann, “A modular and stiffness-controllable co-bot system achieving tasks flexibility and contact compliance,” *Advanced Science*.  https://doi.org/10.1002/advs.77372 (DOI) (**IF: 14.1**)
 2. **W. Gaozhang**, Y. Li, J. Shi, Y. Li, Y. Duan, S.A. Guaman, B. Englot, H.A. Wurdemann, Y. Liu, “Bio-inspired fluidic sensing enables situational awareness of flexible underwater manipulators,” *Science Robotics*.* (Under Review, **IF: 23.6**)
 3. **W. Gaozhang**, Y. Li, J. Shi, Y. Wang, A. Stilli, and H. Wurdemann, “A novel stiffness-controllable joint using antagonistic actuation principles,” *Mechanism and Machine Theory*, vol. 196, 2024. (**IF: 5.2, JCR Q1 Top**)
 4. **W. Gaozhang**, J. Shi, Y. Li, A. Stilli, and H. Wurdemann, “Characterisation of antagonistically actuated, stiffness-controllable joint-link units for cobots,” *IEEE International Conference on Robotics and Automation (ICRA)*, 2023. (**Top-tier Robotics Conference**)
