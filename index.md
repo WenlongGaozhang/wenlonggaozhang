@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<!--# Dr. Wenlong Goazhang-->
+<!--# Dr. Wenlong Gaozhang-->
 **Lecturer in Robotics and AI, <br>
 School of Computer Science and Electronic Engineering <br>
 University of Essex <br>
@@ -10,12 +10,12 @@ Colchester, UK** <br>
 
 ---
 <div style="max-width: 1000px; line-height: 1.5; text-align: justify;">
-    <img src="assets/images/ID Photo_Gaozhang Wenlong400600.jpg" 
+    <img src="assets/images/profile-photo.jpg" 
          alt="Dr Wenlong Gaozhang" 
          width="150" 
          style="float: left; margin: 5px 15px 5px 0; shape-outside: margin-box;">
      <p style="text-indent: 2em;">
-        As a <strong>lecturer at the University of Essex</strong> and former UCL Research Fellow, I am a <strong>full-stack robotics engineer/scientist</strong> specialising in the intersection of advanced mechatronics, multi-physics high-fidelity modelling, and next-generation AI. Over the past six years, my research has spanned the entire <strong>physical-to-virtual pipeline</strong>: from designing, fabricating, and control-loop programming modular hybrid variable-stiffness manipulators and electronics-free bionic sensors, to executing non-linear elastomeric simulations within multiphysics environments. My published and under-review work in premier journals like <strong>Advanced Science, IJRR, and IEEE Transactions on Robotics</strong> serves as a powerful testament and peer-recognised validation of my established track record in biomimetic systems, fluidic/pneumatic actuation, and rigid-soft hybrid robot architectures. Currently, I am actively driving my technical expertise toward <strong>AI-guided embodiment and physics-aware world models</strong>. Recognising that learning-based control is rewriting the rules for complex, highly redundant systems, I am pioneering neural network integration for compliant architectures. I am leveraging <strong>NVIDIA Isaac Sim</strong> to develop GPU-accelerated parallel environments, establish pipelines for <strong>high-throughput synthetic data generation</strong>, and train <strong>reinforcement learning (RL) policies</strong> for end-to-end control. My ultimate vision is a robust symbiosis between classical physical intuition and generative AI, deploying deterministic safety envelopes to safeguard exploratory neural control.
+        I am a <strong>lecturer at the University of Essex</strong> and former UCL Research Fellow, working at the intersection of advanced mechatronics, multi-physics high-fidelity modelling, and next-generation AI. Over the past six years, my research has spanned the full <strong>physical-to-virtual pipeline</strong>: designing, fabricating, and control-programming modular hybrid variable-stiffness manipulators and electronics-free bionic sensors, and running non-linear elastomeric simulations in multiphysics environments. My published and under-review work includes papers in <strong>Advanced Science, IJRR, and IEEE Transactions on Robotics</strong>, spanning biomimetic systems, fluidic/pneumatic actuation, and rigid-soft hybrid robot architectures. I am currently extending this work toward <strong>AI-guided embodiment and physics-aware world models</strong>, integrating learning-based control with compliant robotic architectures. Using <strong>NVIDIA Isaac Sim</strong>, I build GPU-accelerated parallel environments, high-throughput synthetic data pipelines, and train <strong>reinforcement learning (RL) policies</strong> for end-to-end control. My long-term goal is a robust combination of classical physical modelling and generative AI, with deterministic safety envelopes constraining exploratory neural control.
     </p>
 </div>
 
@@ -27,7 +27,11 @@ Colchester, UK** <br>
 
 
 ## 🎓 Education
-<img src="assets/images/Research-Summary-Wenlong.png" alt="My Education" width="650" height="auto">
+- **PhD in Robotics**, University College London (UCL), UK --- Oct 2020 to Mar 2025
+- **MSc in Mechanical Engineering (Distinction)**, Xi'an Jiaotong University, China --- Sep 2017 to Jul 2020
+- **BEng in Mechanical Engineering (Distinction)**, Xiamen University, China --- Sep 2013 to Jul 2017
+
+<img src="assets/images/education-summary.png" alt="Research summary diagram spanning PhD, MSc, and BEng projects" width="650" height="auto">
 
 ## 🔬 Research Interests
 - **Modular Hybrid Variable Stiffness Robotic Manipulator** --- Collaboration with Professor Helge Arne Wurdemann
@@ -36,7 +40,7 @@ Colchester, UK** <br>
 
 <div style="max-width: 1000px; line-height: 1.5; text-align: justify;">
     <video width="100%" controls>
-        <source src="assets/videos/Supplementary Video S1 low res_compressed.mp4" type="video/mp4">
+        <source src="assets/videos/modular-stiffness-cobot-supplementary.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
@@ -49,7 +53,7 @@ Colchester, UK** <br>
 
 <div style="max-width: 1000px; line-height: 1.5; text-align: justify;">
     <video width="100%" controls>
-        <source src="assets/videos/Supplementary Video_compressed.mp4" type="video/mp4">
+        <source src="assets/videos/underwater-situational-awareness-supplementary.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
@@ -62,7 +66,7 @@ Colchester, UK** <br>
 
 <div style="max-width: 1000px; line-height: 1.5; text-align: justify;">
     <video width="100%" controls>
-        <source src="assets/videos/2月27日(1).mp4" type="video/mp4">
+        <source src="assets/videos/soft-continuum-manipulator-demo.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
@@ -75,7 +79,7 @@ Colchester, UK** <br>
 
 <div style="max-width: 1000px; line-height: 1.5; text-align: justify;">
     <video width="100%" controls>
-        <source src="assets/videos/Demo Video.mp4" type="video/mp4">
+        <source src="assets/videos/soft-tactile-sensor-demo.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
@@ -86,7 +90,7 @@ Colchester, UK** <br>
 
 ---
 
-<img src="assets/images/1726126886169.jpg" alt="My Education" width="1000" height="auto">
+<img src="assets/images/soft-haptic-feedback-system.jpg" alt="Soft haptic feedback system for neuropathy diagnostic clinical trials" width="1000" height="auto">
 
 ---
 
@@ -94,7 +98,7 @@ Colchester, UK** <br>
 
 ### 🥇 First / Corresponding Author Publications
 1. **W. Gaozhang**, Y. Li, J. Shi, Y. Wang, A. Stilli, H.A. Wurdemann, “A modular and stiffness-controllable co-bot system achieving tasks flexibility and contact compliance,” *Advanced Science*.  https://doi.org/10.1002/advs.77372 (DOI) (**IF: 14.1**)
-2. **W. Gaozhang**, Y. Li, J. Shi, Y. Li, Y. Duan, S.A. Guaman, B. Englot, H.A. Wurdemann, Y. Liu, “Bio-inspired fluidic sensing enables situational awareness of flexible underwater manipulators,” *Science Robotics*.* (Under Review, **IF: 23.6**)
+2. **W. Gaozhang**, Y. Li, J. Shi, Y. Li, Y. Duan, S.A. Guaman, B. Englot, H.A. Wurdemann, Y. Liu, “Bio-inspired fluidic sensing enables situational awareness of flexible underwater manipulators,” *Science Robotics*. (Under Review, **IF: 23.6**)
 3. **W. Gaozhang**, Y. Li, J. Shi, Y. Wang, A. Stilli, and H. Wurdemann, “A novel stiffness-controllable joint using antagonistic actuation principles,” *Mechanism and Machine Theory*, vol. 196, 2024. (**IF: 5.2, JCR Q1 Top**)
 4. **W. Gaozhang**, J. Shi, Y. Li, A. Stilli, and H. Wurdemann, “Characterisation of antagonistically actuated, stiffness-controllable joint-link units for cobots,” *IEEE International Conference on Robotics and Automation (ICRA)*, 2023. (**Top-tier Robotics Conference**)
 5. Z. Chen, M. Zou, **W. Gaozhang\***, Y. Liu, and J. Huang, “Movement Environment Assessment and Force Prediction for Quadruped Robots,” *Journal of Field Robotics (JFR)*, vol. 43, no. 1, pp. 63-75, 2026. (**IF: 5.2, JCR Q1 Top Journal** in Field & Autonomous Robotics, *\*Corresponding Author*).
@@ -111,3 +115,7 @@ Colchester, UK** <br>
 📧 Email: wenlong.gaozhang@essex.ac.uk
 
 🔗 [Google Scholar](https://scholar.google.ca/citations?user=vhKVcqsAAAAJ&hl=en)  ‖ [LinkedIn](https://www.linkedin.com/in/wenlong-gaozhang-b16962226/?originalSubdomain=uk)
+
+---
+
+<p style="font-size: 0.8em; color: #777;">Page last built: {{ site.time | date: "%B %-d, %Y" }}</p>
